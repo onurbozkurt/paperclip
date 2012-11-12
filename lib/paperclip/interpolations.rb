@@ -155,6 +155,7 @@ module Paperclip
 
     # Returns the id of the instance in a split path form. e.g. returns
     # 000/001/234 for an id of 1234.
+    LAST_ASSET_ID = 35527
     def id_partition attachment, style_name
       if attachment.instance.id > LAST_ASSET_ID
         ("%09d" % attachment.instance.id).scan(/\d{3}/).join("/")
